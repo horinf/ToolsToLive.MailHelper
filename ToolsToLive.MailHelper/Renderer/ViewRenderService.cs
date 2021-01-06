@@ -11,7 +11,7 @@ using System.IO;
 using System.Threading.Tasks;
 using ToolsToLive.MailHelper.Interfaces;
 
-namespace ToolsToLive.MailHelper
+namespace ToolsToLive.MailHelper.Renderer
 {
     public class ViewRenderService : IViewRenderService
     {
