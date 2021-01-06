@@ -20,7 +20,7 @@ namespace ToolsToLive.MailHelper.MailSender
 
         public SmtpClient CreateSmtpClient()
         {
-            return new SmtpClient(_emailSettings.Value.SmtpUrl, _emailSettings.Value.SmtpPort));
+            return new SmtpClient(_emailSettings.Value.SmtpUrl, _emailSettings.Value.SmtpPort);
         }
     }
 }
