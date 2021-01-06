@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ToolsToLive.MailHelper.EmailSender;
 using ToolsToLive.MailHelper.Interfaces;
-using ToolsToLive.MailHelper.MailSender;
 using ToolsToLive.MailHelper.Renderer;
 
 namespace ToolsToLive.MailHelper
@@ -16,8 +16,8 @@ namespace ToolsToLive.MailHelper
             services.Configure<EmailSettings>(configurationSection);
 
             services.AddScoped<IViewRenderService, ViewRenderService>();
-            services.AddScoped<ISmtpClientFactory, SmtpClientFactory>();
-            services.AddScoped<IEmailService, EmailService>();
+            services.AddSingleton<ISmtpClientFactory, SmtpClientFactory>();
+            services.AddSingleton<IEmailService, EmailSendService>();
 
             return services;
         }

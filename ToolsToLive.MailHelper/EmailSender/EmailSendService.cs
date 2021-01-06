@@ -3,14 +3,14 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using ToolsToLive.MailHelper.Interfaces;
 
-namespace ToolsToLive.MailHelper.MailSender
+namespace ToolsToLive.MailHelper.EmailSender
 {
-    public class EmailService : IEmailService
+    public class EmailSendService : IEmailService
     {
         private readonly IOptions<EmailSettings> _emailSettings;
         private readonly ISmtpClientFactory _smtpClientFactory;
 
-        public EmailService(
+        public EmailSendService(
             IOptions<EmailSettings> emailSettingsOptions,
             ISmtpClientFactory smtpClientFactory)
         {

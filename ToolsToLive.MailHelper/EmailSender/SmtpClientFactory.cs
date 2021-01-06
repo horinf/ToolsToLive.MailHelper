@@ -2,7 +2,7 @@
 using System.Net.Mail;
 using ToolsToLive.MailHelper.Interfaces;
 
-namespace ToolsToLive.MailHelper.MailSender
+namespace ToolsToLive.MailHelper.EmailSender
 {
     // SmtpClient doesn't support many modern protocols. It is compat-only. It's great for one off emails from tools, but doesn't scale to modern requirements of the protocol.
     // Use MailKit or other libraries.
